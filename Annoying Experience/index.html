@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .menu
+            {
+                max-width:100%;
+               max-height:100%;
+               position:absolute;    
+               top:0; left:0; right:0; bottom:0;   
+               margin:auto;
+               z-index: -1;
+               animation: fadeIn 2s;
+                -webkit-animation: fadeIn 2s;
+                -moz-animation: fadeIn 2s;
+                -o-animation: fadeIn 2s;
+                -ms-animation: fadeIn 2s;
+            }
+            @keyframes fadeIn {
+            0% {opacity:0;}
+            70%{opacity: 0.9;}
+            100% {opacity:1;}
+            }
+
+            @-moz-keyframes fadeIn {
+            0% {opacity:0;}
+            70%{opacity: 0.9;}
+            100% {opacity:1;}
+            }
+
+            @-webkit-keyframes fadeIn {
+            0% {opacity:0;}
+            70%{opacity: 0.9;}
+            100% {opacity:1;}
+            }
+
+            @-o-keyframes fadeIn {
+            0% {opacity:0;}
+            70%{opacity: 0.9;}
+            100% {opacity:1;}
+            }
+
+            @-ms-keyframes fadeIn {
+            0% {opacity:0;}
+            70%{opacity: 0.9;}
+            100% {opacity:1;}
+            }
+
+            .menuArrow
+            {
+                display: block;
+                max-width:10%;
+               max-height:10%;
+               position:absolute;    
+               top:80vh; left:0; right:0; bottom:0;   
+               margin:auto;
+                z-index: 1;
+            }
+
+            .aboutButton
+            {
+                display: block;
+                position: fixed;
+                margin-right: 20px;
+                margin-top: 10px;
+                top: 0;
+                right: 0;
+                max-width: 6%;
+                height: auto;
+            }
+
+        </style>
+    </head>
+    <body style="background-color:rgb(255, 255, 255) ;">
+
+        <!-- about button -->
+        <a href="about.html">
+            <img src="img/about_button.png" alt="about_button" class="aboutButton">
+        </a>
+        
+        <img src="img/mainmenu-01.png" alt="menu" class="menu" id="idMenu">
+        <input type="image" src="img/menu_arrow.png" alt="menu_arrow" class="menuArrow" onclick="changeImg()">
+
+        <script>
+            function changeImg(){
+                var menuObject = document.getElementById("idMenu");
+                if(menuObject.src.match("img/mainmenu-01.png")){
+                    menuObject.src = "img/explanationpage.png";
+                    menuObject.alt = "explanationpage";
+                }
+                else if(menuObject.src.match("img/explanationpage.png")){
+                    location.href = "scene1.html";
+                }
+            }
+        </script>
+    </body>
+</html>
